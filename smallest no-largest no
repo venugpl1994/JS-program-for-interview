@@ -1,0 +1,66 @@
+------------smallest no in array----------------------
+var array = [3 , 6, 2, 56, 32, 5, 89, 32];
+var small=Infinity;
+
+for (var i=0; i<=array.length-1;i++){
+    if (array[i]<small) {
+        var small=array[i];
+    }
+}
+console.log(small);
+---------------------largest no in array----------------
+var array = [3 , 6, 2, 56, 32, 5, 89, 32];
+var large=0;
+
+for (var i=0; i<=array.length-1;i++){
+    if (array[i]>large) {
+        var large=array[i];
+    }
+}
+console.log(large);
+-------------------------------------------------------------
+find second largest no in array
+function abc(){
+	let n=[87,45,22,1,5,7,100,200,300,400,500];
+	var largest=0,second=0;
+  for(let i=0;i<=n.length-1;i++){
+  	if(n[i]>largest)
+    {
+       second=largest;
+       largest=n[i];
+       
+     }
+     else if(n[i]>second && n[i]!=largest)
+       {
+       		second=n[i];
+       }
+}
+return second;
+}
+console.log(abc());
+---------------------------------------------------------------------
+find largest three number in array
+function abc(){
+	let arr=[2,5,7,1,90,100]
+  var first=0,second=0,third=0;
+  for(let i=0;i<=arr.length-1;i++)
+  {
+  	if(arr[i]>first){
+    	third=second;
+      second=first;
+      first=arr[i];
+    }
+    else if(arr[i]>second){
+    	second=first;
+      first=arr[i];
+    }
+    else if(arr[i]>first){
+    	first=arr[i]
+    }
+  }
+  console.log(first);
+  console.log(second);
+  console.log(third);
+}
+abc();
+--------------------------------------------------------------------------------

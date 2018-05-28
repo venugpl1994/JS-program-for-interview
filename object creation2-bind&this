@@ -1,0 +1,45 @@
+function talk(){
+	console.log(this.sound)
+}
+let bromir={
+	sound:'one does not simply walk into mordor!'
+}
+let talkBoundToBoromir=talk.bind(bromir)
+talkBoundToBoromir()
+talk()//window object
+-----------------------------------------------------------------
+let talk=function(){
+	console.log(this.sound)
+}
+let bromir={
+	speak:talk,
+	sound:'one does not simply walk into mordor!'
+}
+bromir.speak()//property of an onject as a refrence
+talk()//vanilla function as a gobal window and output is undefine
+----------------------------------------------------------------
+let talk=function(){
+	console.log(this.sound)
+}
+let bromir={
+	sound:'one does not simply walk into mordor!'
+}
+bromir.speak=talk.bind(bromir)
+let blabber=bromir.speak
+blabber()
+talk()//vanilla function 
+---------------------------------------------------------------
+let talk=function(){
+	console.log(this.sound)
+}
+let bromir={
+	blabber:talk,
+	sound:'one does not simply walk into mordor!'
+}
+let gollum={
+	jabber:bromir.blabber,
+	sound:'My preciousss......'
+}
+gollum.jabber()//My preciouss..
+bromir.blabber()//one doesnot simply walk into mordor!
+--------------------------------------------------------------------

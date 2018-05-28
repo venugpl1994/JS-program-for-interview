@@ -1,0 +1,61 @@
+Object.create-It creates a new Object with the prototype set to a certain object
+-----------------------------------------------------------------
+const cat={
+	makeSound:function(){
+		console.log('meooowwwwww')
+}
+}
+cat.makeSound()
+----------------------------------------
+const cat={
+	makeSound:function(){
+		console.log(this.sound)
+}
+}
+const mark=Object.create(cat)
+mark.sound='mewuff'
+mark.makeSound()
+const waffles=Object.create(cat)
+waffles.sound='mrrrrrooooooowww'
+waffles.makeSound()
+console.log('Is mark a cat?',mark.isPrototype(cat))//false
+console.log('Is mark a cat?',cat.isPrototype(mark))//true
+-------------------------------------------------------------
+Object.Prototype is more natura than new keyword.Use object.prototype as much as possible.
+------------------------------------------------------------
+How to use objectCreate?
+const cat={
+	makeSound:function(){
+		console.log(this.sound)
+}
+}
+
+function objectCreate(proto){
+	const obj={}
+	Object.setPrototypeOf(obj,proto)
+	return obj
+}
+const mark=objectCreate(cat)
+mark.sound='mewuff'
+mark.makeSound()
+
+const waffles=objectCreate(cat)
+waffles.sound='mrrrrrooooooowww'
+waffles.makeSound()
+console.log('Is mark a cat?',cat.isPrototype(mark))//true
+-----------------------------------------------------------
+const cat={
+	init:function(sound){
+		this.sound=sound
+		return this
+	},
+	makeSound:function(){
+		console.log(this.sound)
+}
+}
+const mark=Object.create(cat).init('mewuff')
+mark.makeSound()
+const waffles=Object.create(cat).init('mrrrrrooooooowww')
+waffles.makeSound()
+console.log('Is mark a cat?',mark.isPrototype(cat))//false
+console.log('Is mark a cat?',cat.isPrototype(mark))//true

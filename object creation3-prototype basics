@@ -1,0 +1,47 @@
+function talk(){
+	console.log(this)
+	console.log(this.sound)
+}
+let animal={
+	talk
+}
+let cat={
+	sound:'meow!'
+}
+let dog={
+	sound:'woof!'
+}
+let pari={
+	howl:function(){
+		console.log(this.sound.toUpperCase())
+	}
+}
+Object.setPrototypeOf(cat,animal)
+Object.setPrototypeOf(dog,animal)
+cat.talk()
+dog.talk()
+Object.setPrototypeOf(pari,dog)
+pari.howl()
+------------------------------------------------------------------
+function talk(){
+	console.log(this)
+	console.log(this.sound)
+}
+let animal={
+	talk
+}
+let dog={
+	sound:'woof!'
+}
+let pari={
+	howl:function(){
+		console.log(this.sound.toUpperCase())
+	}
+}
+Object.setPrototypeOf(dog,animal)
+animal.talk=function(){
+	console.log('I am a little teapot'+this.sound)
+}
+dog.talk()
+Object.setPrototypeOf(pari,dog)
+pari.howl()

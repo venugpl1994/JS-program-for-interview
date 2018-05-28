@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+flexDirection: ["row","row-reverse","column","column-reverse"],
+ justifyContent: ["flex-start","flex-end","center","space-between","space-around"],
+ alignItems: ["flex-start","flex-end","center","stretch","baseline"],
+ flexWrap: ["nowrap","wrap","wrap-reverse"],
+ alignContent: ["flex-start","flex-end","center","stretch","space-between","space-around"]
+-------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+CSS property for flexbox
+----------------------------------------------------------------------------------------------------
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap-reverse;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}

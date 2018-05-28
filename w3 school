@@ -1,0 +1,3 @@
+JS object are mutable.
+To add new property in js  abc.property="jsdfg"
+You can NOT add a new property to a constructor function

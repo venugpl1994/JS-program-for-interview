@@ -1,0 +1,59 @@
+function abc(no){
+let a,temp;
+while(no>0)
+{
+a=no%10;
+no=parseInt(no/10);
+temp=temp*10+a;
+}
+if(temp==no)
+console.log("palindrom number");
+else
+console.log("not a palindrom");
+}
+abc(332);
+------------------------------------------------------
+------------------------------------------------------
+palindrom
+------------------------------------------------------
+function abc(str){
+let flag=0, a=str.length
+for(let i=0;i<a;i++){
+if(str[i]!==str[a-i-1]){
+	flag=1;
+	break;
+}
+}
+if(flag==1){
+	console.log("it is nt a palindrom");
+}
+else{
+console.log("it is  a palindrom");
+}
+}
+abc("maam");
+-----------------------------------------------------------
+---------------------------------------------------------
+do some research
+-----------------------------------------------------------
+div.relative {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    right: 100px;
+    bottom:100px;
+    
+    border: 3px solid #73AD21;
+} 
+
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+-----------------------------------------------------------------
+Another method for sending data to check palindrom
+------------------------------------------------------------------

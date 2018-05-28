@@ -1,0 +1,40 @@
+class Mammal{
+	constructor(sound){
+		this.sound=sound
+	}
+	talk(){
+	return this.sound
+}
+}
+class Dog extends Mammal{
+constructor(){
+	super('woffeliwoofffff')
+}
+}
+let fluffykins=new Mammal('woof!')
+fluffykins.sound='meow'
+let x=fluffykins.talk()
+console.log(x)//"meow"
+---------------------------------------------------------
+class Mammal{
+	constructor(sound){
+		this.sound=sound
+	}
+	talk(){
+	return this.sound
+}
+}
+class Dog extends Mammal{
+constructor(){
+	super('woffeliwoofffff')
+}
+}
+let fluffykins=new Dog('woof!')
+fluffykins.sound='meow'
+let x=Dog.prototype.talk.bind({
+	sound:'ROAR'
+})()
+let y=Dog.prototype.isPrototypeOf(fluffykins)
+console.log(x)//"ROAR"
+console.log(y)
+

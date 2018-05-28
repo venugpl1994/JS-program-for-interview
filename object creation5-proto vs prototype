@@ -1,0 +1,56 @@
+let cat={breed:'mumchkin'}
+< Undefined
+let myCat={name:'Fluffykins'}
+<undefine
+Object.setPrototypeOf(myCat,cat)
+<object{name:'Fluffykins'}
+myCat.breed
+<'mumchkin'
+myCat.name
+<'Fluffykins'
+myCat._proto_
+<object {breed:"mumchkin"}
+cat.tailLength=15
+<15
+myCat._proto_
+<object {breed:"muchkin",tailLength:15}
+myCat.tailLength
+<15
+function Dog(){}
+<undifine
+Dog.prototype.breed="Bulldog"
+<"Bulldog"
+new Dog()
+<Dog{}
+let myDoggie=new Dog()
+<undefine
+myDoggie.breed
+<"Bulldog"
+myDoggie._proto_
+<object {breed:"Bulldog"}
+myDoggie.prototype
+<undefine
+Dog.prototype
+<object {breed:"Bulldog"}
+function Giraffe(){}
+<undefine
+let koala={}
+<undefine
+koala.prototype
+<undefine
+koala._proto_
+<object {}//global object
+koala._proto_===object.prototype
+<true
+Object.prototype.waffle='huwwasss'
+<"huwwasss"
+koala.waffle
+"huwwasss"
+Object()
+<object{}
+new Object
+<object{}
+
+
+
+
